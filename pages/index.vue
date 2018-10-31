@@ -1,18 +1,21 @@
 <template>
-  <section>
-
-  </section>
+  <main class="page-wrap container">
+    <homehero />
+  </main>
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
+import mainheader from '~/components/header/index.vue'
+import homehero from '~/components/heroes/homehero.vue'
 
-// export default {
-//   components: {
-//     Logo
-//   }
-// }
+export default {
+  components: {
+    mainheader,
+    homehero
+  }
+}
 </script>
 
-<style>
+<style lang="scss">
 </style>
+
