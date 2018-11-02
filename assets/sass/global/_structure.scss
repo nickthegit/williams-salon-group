@@ -1,9 +1,20 @@
-.page-wrap {
-  padding: 40px;
-}
-
 .container {
   width: 100%;
   max-width: 1440px;
+  position: relative;
+  top: 0;
+}
 
+h1 {
+  font-family: 'voga-medium', helvetica, sans-serif;
+  font-size: 70px;
+  line-height: 70px;
+  color: $black;
+}
+
+p {
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $paragraph;
 }

@@ -8,7 +8,9 @@
 header {
   width: 100%;
   height: 80px;
-  background: darkkhaki;
+  // background: darkkhaki;
+  position: fixed;
+  z-index: 99;
 }
 </style>
 
