@@ -19,13 +19,18 @@ body {
 
 h1 {
   font-family: 'voga-medium', helvetica, sans-serif;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 13vh;
+  line-height: 13vh;
   color: $black;
 
+  @include breakpoint(tablet) {
+    font-size: 10vh;
+    line-height: 9vh;
+  }
+
   @include breakpoint(mobile) {
-    font-size: 40px;
-    line-height: 36px;
+    font-size: 8vh;
+    line-height: 7vh;
   }
 }
 
