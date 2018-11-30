@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: "Pure Hair | Hairdressers Sherborne",
     meta: [{
         charset: 'utf-8'
       },
@@ -22,10 +22,15 @@ module.exports = {
       }
     ],
     link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700'
+      }
+    ]
   },
 
   /*
@@ -34,7 +39,14 @@ module.exports = {
   loading: {
     color: '#fff'
   },
-
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
+  ],
   /*
    ** Global CSS
    */
@@ -42,18 +54,19 @@ module.exports = {
     '@/assets/sass/global/global.scss'
   ],
 
+  styleResources: {
+    scss: [
+      './assets/sass/global/variables.scss',
+      './assets/sass/global/mediaquery.scss'
+      // use underscore "_" & also file extension ".scss"
+    ]
+  },
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [],
 
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
-  ],
   /*
    ** Axios module configuration
    */

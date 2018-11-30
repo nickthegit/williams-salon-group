@@ -1,7 +1,7 @@
 {
-  "name": "williams-salon-group",
+  "name": "pure-hair",
   "version": "1.0.0",
-  "description": "Theme for all wsg sites",
+  "description": "Theme for Pure Hair site",
   "author": "nickthegit",
   "private": true,
   "scripts": {
@@ -11,9 +11,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/style-resources": "^0.1.1",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.0.0"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^3.1.0",
