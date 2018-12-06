@@ -1,18 +1,35 @@
 <template>
-  <picture>
+  <picture :style="{ backgroundImage: 'url(' + prelaodImg + ')' }">
     <source media="(min-width: 769px)" :srcset="desktopPath">
     <source media="(min-width: 481px)" :srcset="tabletPath">
     <source media="(max-width: 480px)" :srcset="mobilePath">
-    <img :src="fallbackPath" :alt="imgAlt">
+    <img id="testComplete" :src="fallbackPath" :alt="imgAlt">
   </picture>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      link: [
+        {
+          rel: 'preload',
+          href: this.prelaodImg,
+          as: 'image'
+        }
+      ]
+    }
+  },
+  data() {
+    return {
+      prelaodImg:
+        'https://res.cloudinary.com/nickjohn/image/upload/e_blur:700,q_5,f_auto,c_fill,g_auto,w_200,h_200/purehair/' +
+        this.imgUrl
+    }
+  },
   props: {
     imgUrl: {
-      type: String,
-      default: 'https://via.placeholder.com'
+      type: String
     },
     imgAlt: {
       type: String,
@@ -66,18 +83,22 @@ export default {
   },
   methods: {
     filterPath: function(img, width, height) {
+      var cloudinaryStart =
+        'https://res.cloudinary.com/nickjohn/image/upload/q_auto,f_auto,c_fill,g_auto,w_'
       var string =
-        img +
-        '/' +
+        cloudinaryStart +
         width +
-        'x' +
+        ',h_' +
         height +
-        ' 1x, ' +
+        '/purehair/' +
         img +
-        '/' +
+        ' 1x, ' +
+        cloudinaryStart +
         width * 2 +
-        'x' +
+        ',h_' +
         height * 2 +
+        '/purehair/' +
+        img +
         ' 2x'
 
       return string
@@ -86,11 +107,12 @@ export default {
   computed: {
     fallbackPath: function() {
       var string =
-        this.imgUrl +
-        '/' +
+        'https://res.cloudinary.com/nickjohn/image/upload/q_auto,f_auto,c_fill,g_auto,w_' +
         this.desktop_size.width +
-        'x' +
-        this.desktop_size.height
+        ',h_' +
+        this.desktop_size.height +
+        '/purehair/' +
+        this.imgUrl
       return string
     },
     desktopPath: function() {
@@ -115,13 +137,16 @@ export default {
       )
     }
   },
-  mounted() {
-    console.log(this.fallbackPath)
-  }
+  mounted() {}
 }
 </script>
 
 <style lang="scss">
+picture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 img {
   // min-height: 100%;
   height: 100%;

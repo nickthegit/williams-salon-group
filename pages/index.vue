@@ -23,7 +23,7 @@ export default {
       homePageContent: {
         hero: {
           headline: 'Where Dedication Meets Quality',
-          title: 'Pure Hair of Sherborne, Dorset',
+          title: 'Pure Hair, Sherborne',
           // headline: 'Header text here with powerful msg',
           subtext:
             'Sub header here Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit libero eos omnis, aliquam nihil quas quod vitae!',
@@ -32,7 +32,7 @@ export default {
             link: '/'
           },
           image: {
-            url: 'https://via.placeholder.com',
+            url: 'ph-hero-test.jpg',
             alt: 'alt text here top'
           }
         }
@@ -43,5 +43,8 @@ export default {
 </script>
 
 <style lang="scss">
+.page-wrap {
+  height: 300vh;
+}
 </style>
 

@@ -8,9 +8,7 @@
 
 p,
 body {
-  font-family: 'Source Sans Pro',
-    helvetica,
-    sans-serif;
+  font-family: 'Source Sans Pro', helvetica, sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: $paragraph;
@@ -36,7 +34,8 @@ h1 {
 
 h3 {
   text-transform: uppercase;
-  font-size: 20px;
+  letter-spacing: 2px;
+  font-size: 13px;
 
   @include breakpoint(mobile) {
     font-size: 18px;
