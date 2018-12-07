@@ -29,12 +29,15 @@ export default {
   text-decoration: none;
   font-size: 14px;
   border-radius: 25px;
-  background: transparent;
+  background: rgba($white, 0);
   text-transform: uppercase;
-
+  transition: transform 0.2s ease-out;
+  transform-origin: 100% 50%;
   &:hover {
     background: $primary;
-    color: white;
+    transform: scale(1.05);
+    transform-origin: 100% 50%;
+    color: $white;
   }
 }
 </style>

@@ -23,7 +23,11 @@ export default {
   data() {
     return {
       prelaodImg:
-        'https://res.cloudinary.com/nickjohn/image/upload/e_blur:700,q_5,f_auto,c_fill,g_auto,w_200,h_200/purehair/' +
+        'https://res.cloudinary.com/nickjohn/image/upload/e_blur:900,q_20,f_auto,c_fill,g_auto,w_' +
+        this.mobile_size.width / 4 +
+        ',h_' +
+        this.mobile_size.height / 4 +
+        '/purehair/' +
         this.imgUrl
     }
   },
@@ -137,7 +141,9 @@ export default {
       )
     }
   },
-  mounted() {}
+  mounted() {
+    console.log(this.prelaodImg)
+  }
 }
 </script>
 

@@ -33,18 +33,11 @@ export default {
     containedimage
   },
   beforeMount() {
-    console.log(this.imgActive)
     this.imgActive = true
-    console.log(this.imgActive)
   },
   mounted() {
     var rellax = new Rellax('.rellax')
-    var img = document.getElementById('testComplete')
-
-    console.log('Image loaded: ' + img.complete)
-    console.log(this.imgActive)
     this.imgActive = false
-    console.log(this.imgActive)
   },
   data() {
     return {
@@ -143,7 +136,7 @@ section {
     background: $white;
     transform: translateX(100%);
     transition: transform 0.75s cubic-bezier(0.06, 0.635, 0.37, 1.02);
-    transition-delay: 0.4s;
+    transition-delay: 0.8s;
     &.active {
       transform: translateX(0%);
     }
