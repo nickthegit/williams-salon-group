@@ -24,18 +24,20 @@ export default {
 .btn {
   padding: 15px 50px;
   border: solid 1px $primary;
-  color: $primary;
+  // color: $primary;
+  color: $white;
   display: block;
   text-decoration: none;
   font-size: 14px;
   border-radius: 25px;
-  background: rgba($white, 0);
+  // background: rgba($white, 0);
+  background: $primary;
   text-transform: uppercase;
   transition: transform 0.2s ease-out;
   transform-origin: 100% 50%;
   &:hover {
     background: $primary;
-    transform: scale(1.05);
+    transform: scale(1.025);
     transform-origin: 100% 50%;
     color: $white;
   }

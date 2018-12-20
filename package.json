@@ -15,7 +15,6 @@
     "@nuxtjs/style-resources": "^0.1.1",
     "cross-env": "^5.2.0",
     "nuxt": "^2.3.4",
-
     "rellax": "^1.7.1"
   },
   "devDependencies": {
