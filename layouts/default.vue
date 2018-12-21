@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <mainheader />
+  <div :class="{navOpenMain: this.$store.state.menuOpenClose}">
+    <mainheader/>
     <nuxt/>
   </div>
 </template>

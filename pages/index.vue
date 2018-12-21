@@ -45,6 +45,14 @@ export default {
 <style lang="scss">
 .page-wrap {
   height: 300vh;
+  transition: 0.2s all ease-out;
+}
+
+.navOpenMain {
+  .page-wrap {
+    filter: blur(4px) grayscale(100%);
+    transform: translateX(-5%);
+  }
 }
 </style>
 

@@ -1,7 +1,7 @@
 <template>
   <button
     id="burger"
-    :class="{menuActive: menuActive}"
+    :class="{menuActive: this.$store.state.menuOpenClose}"
     class="hamburger hamburger--collapse"
     type="button"
     @click="menuToggle"
@@ -14,14 +14,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      menuActive: false
-    }
-  },
   methods: {
-    menuToggle: function() {
-      this.menuActive = !this.menuActive
+    menuToggle(e) {
+      this.$store.commit('toggle', e.target.value)
     }
   }
 }
@@ -46,6 +41,15 @@ button {
   background: transparent;
   padding: 0;
   cursor: pointer;
+  &.menuActive {
+    .hamburger-box {
+      .hamburger-inner,
+      .hamburger-inner::after,
+      .hamburger-inner::before {
+        background-color: $white;
+      }
+    }
+  }
 }
 </style>
 
